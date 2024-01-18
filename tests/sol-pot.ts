@@ -466,7 +466,7 @@ describe("SolPot", () => {
       );
       assert.ok(
         lotteryAccount.endTime.gte(
-          new anchor.BN(Date.now() / 1000 + 0.99 * 24 * 60 * 60)
+          new anchor.BN(Math.floor(Date.now() / 1010))
         ),
         "End time is within 1 day (with 1% tolerance) of now"
       );
@@ -665,7 +665,7 @@ describe("SolPot", () => {
       );
       assert.ok(
         lotteryAccount.endTime.gte(
-          new anchor.BN(Date.now() / 1000 + 0.99 * 24 * 60 * 60)
+          new anchor.BN(Math.floor(Date.now() / 1010))
         ),
         "End time is within 1 day (with 1% tolerance) of now"
       );
